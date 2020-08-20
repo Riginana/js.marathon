@@ -1,59 +1,28 @@
-let currentYear = 2020;
-const birthdayYear = 1996;
-const age = currentYear - birthdayYear;
-console.log(age)
 
-let a = 10;
-let b = 7;
-//console.log(a+b);
-//console.log(a-b);
-//console.log(a*b);
-//console.log(a/b);
-//console.log(a%b);
+function getRow(firstRow, secondRow){
 
-//console.log(++currentYear)
-//console.log(currentYear)
-//console.log(--currentYear)
+    const resFirst = getCountOfA(firstRow);
+    const resSecond = getCountOfA(secondRow);
+    console.log(resFirst);
+    console.log(resSecond);
+   if (resFirst > resSecond) {
+       console.log( firstRow + ', больше чем ' + secondRow);
+   } else {
+       console.log( firstRow + ', меньше чем ' + secondRow);
+   }
+}
 
-let incrementA = 1;
-let incrementB = 1;
-
-let c = ++incrementA;
-const d = incrementB++;
-console.log(incrementA)
-console.log(incrementB)
-console.log(c)
-console.log(d)
+function getCountOfA(row) {
+    let index = 0;
+    for(let i = 0; i<row.length; i++) {
+        let temp = row.charAt(i);
+        if(temp === 'а') {
+            index+=1;
+        }
+    }
+    return index;
+}
 
 
-c += a
-console.log(c);
+getRow('мама мыла раму', 'собака друг человека');
 
-
-//Boolean
-//console.log('' + 5);
-//console.log(+ '10');
-//console.log(!!'something');
-//Number('5');
-//console.log(Number('10'));
-//console.log(Number('fhkg'));
-
-//console.log(+'5');
-//console.log(typeof +'5');
-//console.log(+ false);
-//console.log(+ null);
-//String(5);
-//console.log(typeof String(5));
-
-//console.log('Hello' + 'World');
-//const hello = 'Hello';
-//const world = 'World';
-//const concat = hello + world;
-//console.log(concat + 5);
-//console.log(concat + true);
-//console.log(concat + null);
-//console.log(concat + undefined);
-//console.log(concat + function () {});
-//console.log(concat + [1,2,3,4]);
-
-//console.log(concat + {});
